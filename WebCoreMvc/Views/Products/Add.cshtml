@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Product Add";
+}
+
+<form action="/Products/Save" method="post">
+    @{ if (ViewBag.message != null)
+        {
+            <div class="alert alert-danger">@ViewBag.message</div>
+        }
+    }
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" name="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="text" name="Price" class="form-control">
+    </div>
+     <div class="mb-3">
+        <label class="form-label">Kategori Id</label>
+        <input type="text" name="CategoryId" class="form-control">
+    </div>
+     <div class="mb-3">
+        <label class="form-label">ImgUrl</label>
+        <input type="text" name="ImageUrl" class="form-control">
+    </div>
+     <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" name="Description" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success  col-md-3">Add</button>
+</form>
